@@ -53,6 +53,8 @@ static void handler(int sig, siginfo_t *siginfo, void *optional)
 
 int main(void)
 {
+	/// delete
+	int a;
 	struct sigaction	sa;
 
 	ft_putstr("Server running\n");
