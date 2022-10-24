@@ -37,7 +37,7 @@ static void handler(int sig, siginfo_t *siginfo, void *context)
 	(void)context;
 	if (!c_pid)
 		c_pid = siginfo->si_pid; // si_pid is the sending process id
-	c |= (sig == SIGUSR1);
+	c |= (sig == SIGUSR1); //SIGUSR1 is the signal being received
 	if (i++ == 8)
 	{
 		i = 0;
@@ -47,7 +47,7 @@ static void handler(int sig, siginfo_t *siginfo, void *context)
 		c = 0;
 		//kill() system call is used to send any signal to any process group or process
 		//SIGUSR2 is sent to the process defined by c_pid
-		kill(c_pid, SIGUSR2);
+		kill(c_pid, SIGUSR2); //SIGUSR2 is the signal being sent
 	}
 	else
 		c = c << 1;
