@@ -37,8 +37,8 @@ static void handler(int sig, siginfo_t *siginfo, void *context)
 	(void)context;
 	if (!c_pid)
 		c_pid = siginfo->si_pid; // si_pid is the sending process id
-	c |= (sig == SIGUSR1); //SIGUSR1 is the signal being received
-	if (i++ == 8)
+	c |= (sig == SIGUSR1); //BITWISE OR OPERATION WITH 0
+	if (++i == 8)
 	{
 		i = 0;
 		if (!c)
@@ -57,8 +57,6 @@ static void handler(int sig, siginfo_t *siginfo, void *context)
 
 int main(void)
 {
-	/// delete
-	int a;
 	struct sigaction	sa;
 
 	ft_putstr("Server running\n");

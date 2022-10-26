@@ -57,16 +57,12 @@ static void ft_client_handler(int signum, siginfo_t *siginfo, void *context)
 {
 	(void)siginfo;
 	(void)context;
-	if (signum == SIGUSR2)
+	if (signum == SIGUSR2) // SIGUSR2 is the sending signal 
+	{
 		return ;
+	}
 	ft_putstr("sending successful");
 	exit(EXIT_FAILURE);	
-}
-
-static void ft_error(void)
-{
-	ft_putstr("\nError :Invalid PID\n");
-	exit(EXIT_FAILURE);
 }
 
 static void ft_last_bit(int pid)
@@ -82,6 +78,11 @@ static void ft_last_bit(int pid)
 	}
 }
 
+static void ft_error(void)
+{
+	ft_putstr("\nError :Invalid PID\n");
+	exit(EXIT_FAILURE);
+}
 
 static void send_to_server(int pid, char *str)
 {
@@ -93,14 +94,14 @@ static void send_to_server(int pid, char *str)
 		i = 8;
 		c = *str++;
 		while (i--)
-		{
-			if (c >> i & 1)
+		{	
+			if (c >> i & 1) // checks if bit is 1 else it's 0
 			{
-				if(kill(pid, SIGUSR1) == -1)
+				if(kill(pid, SIGUSR1) == -1) // kill function sends bit 1
 					ft_error();
 			}
 			else
-				if (kill(pid, SIGUSR2) == -1)
+				if (kill(pid, SIGUSR2) == -1) // kill function sends bit 0
 					ft_error();
 			usleep(50);
 		}
