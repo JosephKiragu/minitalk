@@ -7,9 +7,9 @@ RM = rm -f
 
 HEADER = ./minitalk.h 
 
-SRC = ./utils.c
-SRC_S = ./server.c
-SRC_C = ./client.c 
+SRC = utils.c
+SRC_S = server.c
+SRC_C = client.c 
 
 OBJ = $(patsubst %.c,%.o,$(SRC))
 OBJ_S = $(patsubst %.c,%.o,$(SRC_S))
