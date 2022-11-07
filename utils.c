@@ -6,7 +6,7 @@
 /*   By: jkiragu <jkiragu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 15:13:26 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/11/03 15:14:00 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/11/07 11:53:44 by jkiragu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	ft_putstr(char *str)
 	while (*str)
 		write(1, str++, 1);
 }
-
 
 int	ft_atoi(const char *str)
 {

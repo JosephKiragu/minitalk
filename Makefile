@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jkiragu <jkiragu@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/03 15:12:45 by jkiragu           #+#    #+#              #
-#    Updated: 2022/11/03 15:13:50 by jkiragu          ###   ########.fr        #
+#    Created: 2022/11/07 12:01:00 by jkiragu           #+#    #+#              #
+#    Updated: 2022/11/07 12:12:05 by jkiragu          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SERVER_NAME = server
-CLIENT_NAME = client 
+CLIENT_NAME = client
 
 CC = gcc
 FLAGS = -Wall -Werror -Wextra
