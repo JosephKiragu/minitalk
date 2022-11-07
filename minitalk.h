@@ -6,7 +6,7 @@
 /*   By: jkiragu <jkiragu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 15:13:04 by jkiragu           #+#    #+#             */
-/*   Updated: 2022/11/03 15:13:47 by jkiragu          ###   ########.fr       */
+/*   Updated: 2022/11/07 11:53:18 by jkiragu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 void	ft_putstr(char *str);
 void	ft_putchar(char c);
 void	ft_putnbr(int n);
-int     ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 size_t	ft_strlen(const char *str);
 
 #endif
